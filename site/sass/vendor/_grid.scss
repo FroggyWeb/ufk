@@ -1,0 +1,65 @@
+//разные отступы для медиазапросов
+@mixin grid-row($gutter: 0) {
+  @if ($gutter != 0) {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+  }
+  @else {
+    @each $point, $val in $gutters {
+      @if ($point == 'default') {
+        margin-left: -$val;
+        margin-right: -$val;
+      } @else {
+        @include r($point) {
+          margin-left: -$val;
+          margin-right: -$val;
+        }
+      }
+    }
+  }
+}
+
+@function col-w($span) {
+  @return percentage($span);
+}
+
+@mixin col($span, $gutter: 0) {
+  @if ($gutter != 0) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+  width: col-w($span);
+}
+
+%row {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include grid-row();
+}
+
+%m-col {
+  // flex-grow: 1;
+  // max-width: 100%;
+  @each $point, $val in $gutters {
+    @if ($point == 'default') {
+      padding-left: $val;
+      padding-right: $val;
+    } @else {
+      @include r($point) {
+        padding-left: $val;
+        padding-right: $val;
+      }
+    }
+  }
+}
+
+//short call grid
+@mixin row($gutter: 0) {
+  @extend %row;
+}
+
+@mixin mc() {
+  @extend %m-col;
+}

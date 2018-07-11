@@ -1,0 +1,49 @@
+@mixin grid-row($gutter: $l-g) {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+@function col-w($span) {
+  @return percentage($span);
+}
+
+@mixin col($span, $gutter: $l-g) {
+  flex: 0 0 auto;
+  width: calc(#{percentage($span)} - #{2*$gutter});
+}
+
+//short call grid
+@mixin row($gutter: $l-g) {
+  @extend %row;
+}
+
+@mixin mc($after: $l-after) {
+  @extend %m-col;
+  @if $after > 0 {
+    margin-bottom: $after;
+  }
+}
+
+@mixin span($span, $gutter: $l-g) {
+  margin-left: calc(#{percentage($span)} + #{$gutter});
+}
+
+%row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -$l-g;
+  margin-right: -$l-g;
+  margin-bottom: -$l-g;
+  @include grid-row();
+}
+
+%m-col {
+  // flex: 1 1 auto;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+  margin-left: $l-g;
+  margin-right: $l-g;
+}
+

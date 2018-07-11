@@ -1,0 +1,34 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+// Fonts mixin
+@mixin font($font-family, $filename, $weight: normal, $style: normal) {
+  $folder: "../font/";
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$folder}/#{$filename}.woff2'),
+         url('#{$folder}/#{$filename}.woff');
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+// @mixin includeFont($family, $weight, $style, $filename, $path) {
+//   @font-face {
+//     font-family: $family;
+//     src: url('#{$path}#{$filename}.woff2') format('woff2'),
+//     url('#{$path}#{$filename}.woff') format('woff');
+//     font-weight: $weight;
+//     font-style: $style;
+//   }
+// }
+
+// $pathToRoboto: '../fonts/Roboto/subset-';
+
+// @include includeFont('Roboto', 100, italic, 'Roboto-ThinItalic', $pathtoRoboto);
+// @include includeFont('Roboto', 100, normal, 'Roboto-Thin', $pathtoRoboto);
+// @include includeFont('Roboto', 300, italic, 'Roboto-LightItalic', $pathtoRoboto);
+// @include includeFont('Roboto', 300, normal, 'Roboto-Light', $pathtoRoboto);
+// @include includeFont('Roboto', 400, italic, 'Roboto-Italic', $pathtoRoboto);
+// @include includeFont('Roboto', 400, normal, 'Roboto-Regular', $pathtoRoboto);

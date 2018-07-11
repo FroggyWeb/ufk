@@ -1,0 +1,117 @@
+extend part/_base
+
+block content
+  +b.page
+    +e.__content
+      include part/_header
+      .container
+        .section
+          +b.slider.--main.center
+            +e.__item
+              img(src="../img/temp/slide_ufk6.jpg", alt="super 1")
+        .section
+          +b.benefits.--main.row
+            +e.__item
+              +e.__icon
+              +e.__title Врезка любых петель и замков!
+              +e.__txt Без дополнительных вставок и копировальных втулок
+            +e.__item
+              +e.__icon
+              +e.__title Подходит на все модели фрезеров
+              +e.__txt Фрезер легко крепится на специальное крепежное кольцо
+            +e.__item
+              +e.__icon
+              +e.__title Быстросъемные струбцины
+              +e.__txt С 2-мя  подвижными элементами и шкалой. Для изменения центра зажима
+            +e.__item
+              +e.__icon
+              +e.__title Одновременная врезка петель
+              +e.__txt В дверное полотно и коробку. Врезка ригеля и скрытых петель.
+      section.section
+        +e.__index-review
+          .container
+            +b.h2.title.--big КАК ЭТО РАБОТАЕТ
+            +e.__index-review-cnt.row
+              +e.__index-review-txt
+                p С универсальным шаблоном для фрезера УФК-6 для врезки петель и замков можно врезать абсолютно любую фурнитуру за считанные секунды! Качество врезки заводское с нулевой погрешностью.
+                +b.UL.check-list
+                  li <b>Установите шаблон для ручного фрезера на дверное полотно или коробку.</b>
+                  li <b>Выставите размеры петли или замка на разметке, по ширине и длине.</b>
+                  li <b>Закрепите фрезер на специальное крепежное кольцо.</b>
+                  li <b>Каретка готова к врезке фурнитуры.</b>
+              +e.__index-review-video
+                +b.video-list
+                  +b.video
+                    +e.__wrap
+                      iframe( width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen>)
+                  +b.video
+                    +e.__wrap
+                      img(src="../img/temp/video-2.jpeg" alt="")
+                  +b.video
+                    +e.__wrap
+                      img(src="../img/temp/video-3.jpeg" alt="")
+                  +b.video
+                    +e.__wrap
+                      img(src="../img/temp/video-4.jpeg" alt="")
+              .btn-wrap
+                +b.btn.--big(href="#") Посмотреть технические характеристики
+
+      section.section
+        .center
+          .container
+            +b.h2.title.--med Новые струбцины с двумя подвижными элементами
+            +b.col-2
+              +b.UL.check-list
+                li Увеличилась ширина захвата заготовки до 140 мм
+                li Быстрая смена центра врезки, благодаря этому увеличилась рабочая область каретки
+                li Разметка - для удобной точной и быстрой настройки шаблона
+                li Быстросъемные струбцины - каретка занимает меньше места, удобней транспортировать.
+                li Увеличенные резиновые держатели и усиленная конструкция - сделано на заказ. В свободной продаже нет.
+                li Благодаря 2 подвижным элементам уменьшились размеры передвижной матрицы, а шаблон УФК-6 стал компактней и удобней
+              p
+                img(src="../img/temp/strub.jpeg" alt="")
+
+      section.section
+        .container
+          +b.h2.title.--small.--center Популярные товары
+          +b.prod-list.--center
+            +e.__item
+              +e.__link(href="#")
+                +e.__img(href="#")
+                  img(src="../img/temp/prod-1.png", alt="")
+                +e.__title(href="#") УФК-6 универсальная фрезерная каретка
+                +e.DIV.__price 13500 руб.
+                +e.__btn
+                  +b.btn.--invert(href="#") Подробнее
+                  +b.btn(href="#") Купить
+            +e.__item
+                +e.__img(href="#")
+                  img(src="../img/temp/prod-2.jpg", alt="")
+                +e.__title(href="#") Угловая стамеска (пробойник)
+                +e.DIV.__price 500 руб.
+                +e.__btn
+                  +b.btn.--invert(href="#") Подробнее
+                  +b.btn(href="#") Купить
+            +e.__item
+                +e.__img(href="#")
+                  img(src="../img/temp/prod-3.jpg", alt="")
+                +e.__title(href="#") Удлинитель для фрез универсальный
+                +e.DIV.__price 1500 руб.
+                +e.__btn
+                  +b.btn.--invert(href="#") Подробнее
+                  +b.btn(href="#") Купить
+
+          .btn-wrap
+              +b.btn(href="#") Перейти в каталог товаров
+
+    include part/_page-footer
+
+
+
+
+
+
+
+
+//- Content page_______________________________________
+block form

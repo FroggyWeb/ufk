@@ -1,0 +1,78 @@
+extend part/_base
+
+block content
+  +b.page
+    +e.__content
+      include part/_header
+      .container
+        +b.h1.title.--med Каталог товаров
+        .section
+          +b.catalog
+            +e.__nav
+              +b.UL.side-nav
+                +e.__item.active
+                  +e.__link(href="#") все
+                +e.__item
+                  +e.__link(href="#") Оборудование
+                +e.__item
+                  +e.__link(href="#") Комплектующие
+                +e.__item
+                  +e.__link(href="#") Инструменты
+                +e.__item
+                  +e.__link(href="#") Расходные материалы
+
+            +e.__list
+              +b.prod-list
+                - var n = 0;
+                while n < 4
+                  - n++
+                  +e.__item
+                    +e.__link(href="#")
+                      +e.__img(href="#")
+                        img(src="../img/temp/prod-1.png", alt="")
+                      +e.__title(href="#") УФК-6 универсальная фрезерная каретка
+                      +e.DIV.__price 13500 руб.
+                      +e.__btn
+                        +b.btn.--invert(href="#") Подробнее
+                        +b.btn(href="#") Купить
+                  +e.__item
+                    +e.__img(href="#")
+                      img(src="../img/temp/prod-2.jpg", alt="")
+                    +e.__title(href="#") Угловая стамеска (пробойник)
+                    +e.DIV.__price 500 руб.
+                    +e.__btn
+                      +b.btn.--invert(href="#") Подробнее
+                      +b.btn(href="#") Купить
+                  +e.__item
+                    +e.__img(href="#")
+                      img(src="../img/temp/prod-3.jpg", alt="")
+                    +e.__title(href="#") Удлинитель для фрез универсальный
+                    +e.DIV.__price 1500 руб.
+                    +e.__btn
+                      +b.btn.--invert(href="#") Подробнее
+                      +b.btn(href="#") Купить
+
+          +b.UL.pagination
+            +e.__item
+              +e.__link(href="#") <
+            +e.__item.active
+              +e.__link(href="#") 1
+            +e.__item
+              +e.__link(href="#") 2
+            +e.__item
+              +e.__link(href="#") 3
+            +e.__item
+              +e.__link(href="#") 42
+            +e.__item
+              +e.__link(href="#") >
+    include part/_page-footer
+
+
+
+
+
+
+
+
+//- Content page_______________________________________
+block form

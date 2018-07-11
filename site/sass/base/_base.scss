@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+
+body {
+  font: $f-base;
+  color: $c-text;
+  margin: 0;
+  height: 100%;
+}
+
+audio,
+canvas,
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  outline: none!important;
+}
+
+a {
+  color: $c-link;
+  // &:hover {
+  //   color: $c-active;
+  // }
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg {
+  fill: currentcolor;
+}
+
+
+

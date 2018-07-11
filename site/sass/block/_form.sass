@@ -1,0 +1,102 @@
+.btn-wrap
+  width: 100%
+  margin: $l-g 0
+  text-align: center
+  & > *
+    margin-left: $l-g
+    &:first-child
+      margin-left: 0
+  &--lagre
+    margin: 1.5*$l-g 0
+  &--left
+    text-align: left
+
+.btn
+  background-color: $c-brand
+  display: inline-block
+  padding: .7em 1.2em
+  border-radius: 4px
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12px
+  letter-spacing: .5px
+  color: #000
+  position: relative
+  &:before
+    content: ""
+    height: 2px
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    opacity: 1
+    background-color: #000
+    transform: scaleX(0)
+    transition: transform .2s ease-in
+  &:hover
+    &:before
+      opacity: 1
+      transform: scaleX(1)
+  &--invert
+    background: #545454
+    color: #fff
+    &:before
+      background-color: $c-brand
+  &--big
+    font-size: 18px
+    font-weight: normal
+
+.form-line
+  width: 100%
+  display: flex
+  margin: $l-g/2 0
+  input
+    padding: 7px
+
+  label > input
+      margin-left: $l-g
+
+input
+  line-height: 1
+
+input[name="prodCout"]
+  width: 50px
+  text-align: center
+
+//  minus
+//form-styler
+.jq-number
+  margin-left: $l-g
+  padding: 0 15px
+  position: relative
+  text-align: center
+  font-weight: bold
+
+.jq-number__spin
+  position: absolute
+  top: 50%
+  height: 100%
+  &:hover
+    &:before
+      background-color: $c-brand
+  &:before
+    position: absolute
+    font-size: 18px
+    width: 20px
+    height: 20px
+    line-height: 20px
+    border-radius: 50%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+    transition: backgraund .2s
+  &.minus
+    left: 0
+    &:before
+      content: "−"
+  &.plus
+    right: 0
+    &:before
+      content: "+"
+
+

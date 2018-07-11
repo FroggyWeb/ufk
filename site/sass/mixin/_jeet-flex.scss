@@ -1,0 +1,47 @@
+// add JEET mixin for flex
+
+@mixin col-f($ratios: 1, $offset: 0, $cycle: 0, $gutter: map-get($jeet, 'gutter'), $nth: map-get($jeet, 'nth')) {
+  $side: _get-layout-direction();
+  $opposite-side: _opposite-direction($side);
+  $column-widths: _get-column($ratios, $gutter);
+  $margin-last: 0;
+  $margin-l: $margin-last;
+  $margin-r: nth($column-widths, 2);
+  $nth-selector: "nth-child";
+  @if $nth == "type" {
+    $nth-selector: "nth-of-type";
+  }
+
+  @if $offset != 0 {
+    @if $offset < 0 {
+      $offset: $offset * -1;
+      $offset: nth(_get-column($offset, nth($column-widths, 2)), 1);
+      $margin-last: $offset + nth($column-widths, 2) * 2;
+      $margin-r: $margin-last;
+    } @else {
+      $offset: nth(_get-column($offset, nth($column-widths, 2)), 1);
+      $margin-l: $offset + nth($column-widths, 2);
+    }
+  }
+
+  flex: 1 1 nth($column-widths, 1) * 1%;
+  margin: {
+    #{$side}: $margin-l * 1%;
+    #{$opposite-side}: $margin-r * 1%;
+  };
+
+  @if $cycle != 0 {
+    &:#{$nth-selector}(n) {
+      margin-#{_opposite-direction($side)}: $margin-r * 1%;
+    }
+
+    &:#{$nth-selector}(#{$cycle}n) {
+      margin-#{_opposite-direction($side)}: $margin-last * 1%;
+    }
+
+  } @else {
+    &:last-child {
+      margin-#{_opposite-direction($side)}: $margin-last * 1%;
+    }
+  }
+}

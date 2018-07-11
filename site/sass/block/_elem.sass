@@ -1,0 +1,99 @@
+.logo
+  &__img
+    margin-right: 20px
+  &__title
+    font-family: $f-title
+    text-transform: uppercase
+    +rmax(lg)
+      display: none
+  &__maintitle
+    font-weight: bold
+    font-size: 22px
+    +rmax(lg)
+      display: none
+
+.logo--top-line
+  display: flex
+  align-items: center
+  +rmax(md)
+    display: none
+
+.tel
+  &__num
+    font-family: $f-title
+    font-weight: bold
+    font-size: 24px
+    margin-left: 5px
+
+.benefits
+  text-align: center
+  &__item
+    +mc()
+    +col(1)
+    +r(xs)
+      +col(1/2)
+    +r(md)
+      +col(1/4)
+  &__title
+    font: bold 18px/1.2 $f-title
+    text-transform: uppercase
+    margin-bottom: 10px
+
+.check-list
+  padding: 0
+  list-style: none
+  li
+    margin-top: 10px
+    padding-left: 35px
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      width: 28px
+      height: 23px
+      background: url('../../img/ul-check.svg') no-repeat center center
+      top: 0
+      left: 0
+
+.video-list
+  +row
+  +rmax(xs)
+    justify-content: center
+
+.video
+  +mc()
+  position: relative
+  +rmax(xs)
+    flex: 0 0 280px
+
+  &__wrap
+    display: block
+    position: relative
+    padding-bottom: 56.6%
+    img,iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+.page
+  &__index-review
+    background-color: $c-sec
+    padding: 2*$l-g 0
+
+  &__index-review-cnt
+    font-size: 16px
+  &__index-review-txt
+    +mc()
+    // +col(1)
+  &__index-review-video
+    +mc()
+    +col(1)
+    +r(sm)
+      +col(2/3)
+    .video
+      +r(xs)
+        +col(1/2)
+
+

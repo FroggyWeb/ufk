@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Верстка проекта lav-shop</title>
+</head>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html, body {
+		height: 100%;
+	}
+	body {
+		font: 16px "Arial", sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	h1 {
+		color: #555;
+		margin-bottom: 30px;
+	}
+	.container {
+		flex: 0 1 500px;
+	}
+	.links-page {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.links-page__item {
+	}
+	.links-page__item:nth-child(2n) {
+		background-color: #eee;
+	}
+	a {
+		display: block;
+		padding: 10px;
+		color: #E2174D;
+		transition: background .2s
+	}
+
+	a:hover {
+		background-color: #E2174D;
+		color: #fff;
+		box-shadow: 0 0 2px rgba(0, 0, 0, .5)
+	}
+
+</style>
+
+<body>
+	<div class="container">
+		<h1>Проект lav-shop</h1>
+		<ul class="links-page">
+			<li class="links-page__item">
+				<a href="main.html" class="page-link">Главная</a>
+			</li>
+			<li class="links-page__item">
+				<a href="catalog.html" class="page-link">Каталог</a>
+			</li>
+			<li class="links-page__item">
+				<a href="product.html" class="page-link">Карточка товара</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+$breakpoints: (
+  'xs': 560px,
+  'sm': 767px,
+  'md': 992px,
+  'lg': 1200px
+) !default;
+
+$f-base: 14px/1.4 "Arial", sans-serif;
+$f-title: "OpenSans", serif;
+$f-color: #555;
+
+$l-g: 1rem;
+$l-after: 1.5rem;
+
+$c-main: #333333;
+$c-brand: #f2e019;
+$c-sec: #d4d4d4;
+$c-text: #333;
+$c-link: inherit;
+$c-active: inherit;
+
+
+// @include font("Philosopher", "philosopher-regular-webfont", 400 );
+@include font("OpenSans", "opensanscondensed-bold-webfont", 700);
+@include font("OpenSans", "opensans-light-webfont", 400);

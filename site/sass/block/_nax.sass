@@ -1,0 +1,74 @@
+.nav-list
+  @extend %ul-l
+  &__link
+    display: block
+
+.nav--top
+  background-color: #d4d4d4
+  margin: 20px 0
+  font-size: 16px
+  +rmax(md)
+    display: none
+  .nav-list
+    display: flex
+    justify-content: center
+  .nav-list__link
+    padding: 10px 20px
+    text-decoration: none
+  .nav-list__item:hover
+    background-color: lighten($c-brand, 40%)
+  .nav-list__item.active
+      background-color: $c-brand
+
+.side-nav
+  @extend %ul-l
+  position: relative
+  &__item
+    &.active
+      background-color: $c-brand
+    &:hover
+      background-color: lighten($c-brand, 40%)
+  &__link
+    display: block
+    text-decoration: none
+    padding: .5em 1em
+
+.pagination
+  display: block
+  width: 100%
+  text-align: center
+  margin: 30px 0
+  &__item
+    display: inline-block
+    line-height: 24px
+    width: 24px
+    height: 24px
+    margin: 0 3px
+    border-radius: 50%
+    border: 1px solid $c-sec
+    &:hover
+      background-color: lighten($c-brand, 20%)
+    &.active
+      background-color: $c-brand
+  &__link
+    text-decoration: none
+
+.tabs
+  margin-top: 30px
+
+.tabsnav
+  @extend %ul-l
+  margin-bottom: 20px
+  display: flex
+  flex: 1 1 100%
+  border-bottom: 1px solid $c-main
+  &__item
+    &:hover
+      background-color: lighten($c-brand, 20%)
+    &.active
+      color: #fff
+      background-color: $c-main
+  &__link
+    display: block
+    text-decoration: none
+    padding: 0.5em 1em

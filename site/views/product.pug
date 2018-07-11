@@ -1,0 +1,78 @@
+extend part/_base
+
+block content
+  +b.page
+    +e.__content
+      include part/_header
+      main.container
+
+        .section
+          +b.product
+            +e.__img
+              img(src="../img/temp/prod-1.png", alt="УФК 6 универсальная каретка для фрезера")
+            +e.__cart
+              +e.H1.__title УФК 6 универсальная каретка для фрезера
+              +e.P.__descript Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod amet ullam laboriosam, blanditiis voluptas alias veritatis quos, harum temporibus quis quasi. Voluptatibus aspernatur doloribus harum distinctio illum in eaque corporis!
+              +e.__bay
+                +e.__price Цена: <span class="price">13500</span> руб.
+                +e.FORM.__bay-form
+                  +b.form-line
+                    label Количество
+                      input.styler(type="number" value="1" name="prodCout")
+                  +b.btn-wrap.--left
+                    a(href="#").btn Купить
+                    a(href="#") добавить в корзину
+
+          +b.tabs
+            +b.UL.tabsnav
+              +e.__item
+                +e.__link(href="#descript") Описание
+              +e.__item
+                +e.__link(href="#spec") Характеристики
+            +e.__item#descript Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste harum suscipit eos enim sint odio autem nesciunt, culpa dolor consequatur, dicta quae pariatur ab, fuga incidunt molestias? Ipsam, repellendus ratione!
+            +e.__item#spec Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit inventore quia a numquam nam, architecto corrupti doloribus iusto, delectus ea, pariatur eum nisi quasi voluptatem ipsa dolorem! Ducimus, esse.
+
+
+
+
+
+
+            //- +e.__tech
+            //-   h2 Технические параметры:
+            //-   ul
+            //-     li Страна производитель:
+            //-       b Россия
+            //-     li Длина фрезеровки Х:
+            //-       b  225 мм + Ø фрезы
+            //-     li Длина фрезеровки Y:
+            //-       b 70 мм + Ø фрезы
+            //-     li Глубина фрезеровки:
+            //-       b равна длине фрезы
+            //-     li Ширина захвата заготовки:
+            //-       b 140 мм
+
+            //-   h2 Габариты:
+            //-   p Вес: 3,9 кг;&nbsp;460 мм;&nbsp;335 мм
+
+            //-   h2 Комплектация:
+            //-   ul
+            //-     li Коробка
+            //-     li Универсальная фрезерная каретка УФК 6
+            //-     li Шайбы 3 шт
+            //-     li Центроискатель
+            //-     li Штанга-ригель (хвостовик)
+            //-     li Переходная планка
+            //-     li Ключ шестигранник
+
+
+    include part/_page-footer
+
+
+
+
+
+
+
+
+//- Content page_______________________________________
+block form

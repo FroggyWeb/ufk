@@ -1,0 +1,32 @@
++b.top-line
+  .theiaStickySidebar
+    .container
+      +e.__wrap
+        +b.logo.--top-line
+          +e.__img(href="/")
+            img(src="./img/logo.png", alt="")
+          +e.__title
+            +e.__maintitle УНИВЕРСАЛЬНАЯ ФРЕЗЕРНАЯ КАРЕТКА <br> УФК-6 УФК-5 УФК-4
+            | Производство и продажа профессионального инструмента
+        +e.__side
+          +e.__time
+            | с 9:00 до 21:00 MSK<br> без выходных
+          +e.__tel
+            +b.tel
+              | +7 (966)
+              +e.SPAN.__num 164 62 62
+            +b.tel
+              | +7 (963)
+              +e.SPAN.__num 624 54 18
+          +e.__btn
+            +b.btn(href="#") Заказать звонок
+
++b.NAV.nav.--top
+  .container
+    +b.UL.nav-list
+      +navItem("Главная", "current")
+      +navItem("Каталог товаров")
+      +navItem("УФК")
+      +navItem("Гарантия качества")
+      +navItem("Вопрос-ответ")
+      +navItem("Контакты")

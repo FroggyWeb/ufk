@@ -1,0 +1,42 @@
+.link-block {
+    text-decoration: none;
+    color: inherit;
+}
+
+%ul-l {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ul-l {
+    @extend %ul-l;
+}
+
+%cf {
+    &:before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.disable {
+    opacity: .5;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.svg-icon {
+  display: inline-block;
+}

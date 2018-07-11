@@ -1,0 +1,60 @@
+
+.page
+  display: flex
+  width: 100%
+  min-height: 100vh
+  overflow: hidden
+  flex-direction: column
+
+.page__content
+  flex: 1 0 auto
+
+.container
+  margin-left: auto
+  margin-right: auto
+  max-width: 1400px
+  padding: 0 20px
+  +r(sm)
+    padding: 0 30px
+
+.row
+  +row()
+
+.section
+  margin-top: $l-g*4
+  margin-bottom: $l-g*4
+
+.top-line
+  background-color: #fff
+  line-height: 1.2
+  &__wrap
+    display: flex
+    align-items: center
+    flex: 1 1 100%
+    padding: 20px 0
+  &__side
+    display: flex
+    align-items: center
+    margin-left: auto
+    & > *
+      margin-left: 20px
+  &__time
+    +rmax(md)
+      display: none
+  &__tel
+    +rmax(md)
+      display: none
+
+.center
+  max-width: 960px
+  margin-left: auto
+  margin-right: auto
+
+.col-2
+  +row()
+  &>*
+    +mc()
+    +col(1)
+    +r(sm)
+      +col(1/2)
+

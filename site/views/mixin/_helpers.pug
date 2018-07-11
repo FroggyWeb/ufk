@@ -1,0 +1,8 @@
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="svg-icon icon-" + name + ' ' + mod)
+    use(xlink:href="img/symbol.svg#" + name)
+
+mixin navItem(name, current)
+  li.nav-list__item(class={active: current})
+    a.nav-list__link(href='#')= name
